@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Colorful fish aquarium: interactive tank, species guide and care tips.">
+  <title>Reef &amp; Fin | Color Fish Aquarium</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo">🐠 Reef &amp; Fin</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#tank">Live Tank</a></li>
+        <li><a href="#species">Species</a></li>
+        <li><a href="#care">Care Tips</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container">
+      <h1 class="hero__title">Dive into a world of <span class="gradient-text">color</span></h1>
+      <p class="hero__text">Explore vibrant freshwater and marine fish, build your own virtual tank, and learn how to keep them healthy.</p>
+      <a href="#tank" class="btn">Visit the Tank</a>
+    </div>
+  </header>
+
+  <section class="section" id="tank">
+    <div class="container">
+      <h2 class="section__title">Live Tank</h2>
+      <p class="section__sub">Click inside the water to drop food. Add fish from the species guide below.</p>
+      <div class="tank">
+        <canvas id="tankCanvas" role="img" aria-label="Animated aquarium with swimming fish"></canvas>
+        <span class="tank__count" id="fishCount">0 fish</span>
+      </div>
+      <div class="controls">
+        <button class="btn" id="feedBtn">🍤 Feed</button>
+        <button class="btn btn--ghost" id="addRandomBtn">➕ Random Fish</button>
+        <button class="btn btn--ghost" id="clearBtn">🧹 Clear Tank</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="species">
+    <div class="container">
+      <h2 class="section__title">Species Guide</h2>
+      <p class="section__sub">Popular colorful fish for home aquariums.</p>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="gallery"></div>
+    </div>
+  </section>
+
+  <section class="section" id="care">
+    <div class="container">
+      <h2 class="section__title">Care Tips</h2>
+      <p class="section__sub">Healthy water makes happy fish.</p>
+      <div class="care-grid">
+        <article class="care-card reveal">
+          <div class="care-card__icon">💧</div>
+          <h3>Water Quality</h3>
+          <p>Cycle the tank before adding fish. Test ammonia, nitrite and nitrate, and change 20–25% of the water weekly.</p>
+        </article>
+        <article class="care-card reveal">
+          <div class="care-card__icon">🌡️</div>
+          <h3>Temperature</h3>
+          <p>Use a heater and thermometer. Match the temperature to your species; tropical fish usually need 22–28°C.</p>
+        </article>
+        <article class="care-card reveal">
+          <div class="care-card__icon">🍤</div>
+          <h3>Feeding</h3>
+          <p>Feed small amounts once or twice a day, only what they finish in about 2 minutes. Overfeeding pollutes water.</p>
+        </article>
+        <article class="care-card reveal">
+          <div class="care-card__icon">🤝</div>
+          <h3>Compatibility</h3>
+          <p>Research temperament and adult size before buying, and avoid overstocking. Some fish, like male bettas, must live alone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>🐟 Reef &amp; Fin Aquarium · Open daily 10 AM – 8 PM</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
